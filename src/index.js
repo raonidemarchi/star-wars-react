@@ -1,8 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
-const Index = () => {
-    return <div>Hello Teste!</div>;
-};
+import Navbar from './components/Navbar';
+import Search from './components/Search';
+import Home from './components/Home';
 
-ReactDOM.render(<Index />, document.getElementById('index'));
+const Routes = () => {
+    return <BrowserRouter>
+        <div>
+            <ul>
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+                <li>
+                    <Link to="/search">Search</Link>
+                </li>
+            </ul>
+
+            <Route exact path="/" component={Home} />
+            <Route path="/search" component={Search} />
+        </div>
+    </BrowserRouter>
+}
+
+ReactDOM.render(<Routes />, document.getElementById('index'));
