@@ -1,0 +1,26 @@
+body {
+    background-color: #191919;
+
+    input.form-control-search {
+        background-color: transparent !important;
+        color: #fff !important;
+
+        &:focus {
+            border-color: #ffc107;
+            box-shadow: 0 0 0 3px rgba(255, 193, 7, .25);
+        }
+    }
+    
+    nav.navbar {
+        background-color: #222;
+
+        .navbar-brand {
+            font-size: 2.8rem;
+        }
+    }
+
+    .mw-600 {
+        max-width: 600px;
+    }
+
+}

@@ -15,7 +15,7 @@ class Search extends React.Component {
             <Navbar query={this.state.query} />
 
             <div className="container mt-5">
-                
+                {this.state.query}
             </div>
         </div>
     }

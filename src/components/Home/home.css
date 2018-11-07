@@ -1,9 +1,0 @@
-input#search {
-    background-color: transparent;
-    color: #fff;
-}
-
-input#search:focus {
-    border-color: #ffc107;
-    box-shadow: 0 0 0 3px rgb(255,193,7,.25);
-}

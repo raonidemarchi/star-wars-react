@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Routes from './routes.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+import './styles/css/styles.css';
 
 const App = () => {
     return <BrowserRouter>
