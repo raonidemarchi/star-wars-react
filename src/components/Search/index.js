@@ -1,15 +1,24 @@
 import React from 'react';
-import styles from './search.css';
-import { Link } from 'react-router-dom';
+import Navbar from '../Navbar';
 
-const Search = () => {
-    return <div>
-        <div className={styles.orange}>
-            Search components
+class Search extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            query: this.props.match.params.query
+        }
+    }
+
+    render() {
+        return <div>
+            <Navbar query={this.state.query} />
+
+            <div className="container mt-5">
+                
+            </div>
         </div>
-
-        <Link to="/">Home</Link>
-    </div>
+    }
 }
 
 export default Search;

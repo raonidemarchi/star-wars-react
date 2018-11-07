@@ -21,22 +21,16 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+                use: ["style-loader", "css-loader"]
+            },
+            {
+                test: /\.(pdf|jpg|png|gif|svg|ico)$/,
                 use: [
                     {
-                        loader: "style-loader"
+                        loader: "url-loader"
                     },
-                    {
-                        loader: "css-loader",
-                        options: {
-                            modules: true,
-                            importLoaders: 1,
-                            localIdentName: "[hash:base64]",
-                            sourceMap: true,
-                            minimize: true
-                        }
-                    }
                 ]
-            }
+            },
         ]
     },
 

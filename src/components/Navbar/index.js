@@ -1,15 +1,26 @@
 import React from 'react';
-import styles from './home.css';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
-    return <div>
-        Home component
-        
-        <div>
-            <Link to="/search">Go search</Link>
-        </div>
-    </div>
+import './navbar.css';
+
+class Navbar extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            query: this.props.query
+        }
+    }
+
+    render() {
+        return <nav className="navbar">
+            <div className="container">
+                <form>
+                    <input className="form-control w-100" type="search" placeholder="Search" aria-label="Search" value={this.state.query} />
+                </form>
+            </div>
+        </nav>
+    }
 }
 
-export default Home;
+export default Navbar;

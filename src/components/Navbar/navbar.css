@@ -1,4 +1,7 @@
-.orange {
-  background-color: orange;
-  color: white;
+nav.navbar {
+    background-color: #212121;
+}
+
+nav .navbar-brand {
+    font-size: 2.8rem;
 }
