@@ -20,7 +20,7 @@ class Home extends React.Component {
     submit(e) {
         e.preventDefault();
         this.props.history.push('/search/' + this.state.query);
-    }
+    }1
 
     render() {
         return <div className="text-center align-items-center container mt-5">
@@ -28,7 +28,7 @@ class Home extends React.Component {
         
             <form onSubmit={this.submit}>
                 <div className="form-group mb-4 w-50 mx-auto">
-                    <input type="search" onChange={this.change} autoComplete="off" className="form-control form-control-lg" id="search" placeholder="Seek knowledge, you must..." autoFocus={true} value={this.state.query} />
+                    <input type="search" onChange={this.change} autoComplete="off" className="form-control form-control-lg" id="search" placeholder="Seek knowledge you must..." autoFocus={true} value={this.state.query} />
                 </div>
             </form>
         </div>
