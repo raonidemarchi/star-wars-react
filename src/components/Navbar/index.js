@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import img from '../../img/star-wars.png';
+import img from '../../img/star-wars.svg';
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -33,7 +33,7 @@ class Navbar extends React.Component {
 
                 <div className="flex-fill mw-600">
                     <form className="form-inline w-100" onSubmit={this.submit}>
-                        <input type="search" className="form-control w-100 form-control-lg form-control-search" placeholder="Seek knowledge you must" value={this.state.query} onChange={this.change} />
+                        <input type="search" className="form-control w-100 form-control-lg form-control-search" placeholder="Seek knowledge you must..." value={this.state.query} onChange={this.change} />
                     </form>
                 </div>
                 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import img from '../../img/star-wars.png'
+import img from '../../img/star-wars.svg'
 
 class Home extends React.Component {
     constructor(props) {
@@ -22,14 +22,16 @@ class Home extends React.Component {
     }
 
     render() {
-        return <div className="text-center align-items-center container mt-5">
-            <img src={img} className="img-fluid mb-5" alt="Star Wars" width="240" />
-        
-            <form onSubmit={this.submit}>
-                <div className="form-group mb-4 mx-auto mw-600">
-                    <input type="search" onChange={this.change} autoComplete="off" className="form-control form-control-lg form-control-search" placeholder="Seek knowledge you must..." autoFocus={true} value={this.state.query} />
-                </div>
-            </form>
+        return <div className="text-center d-flex container h-80vh">
+            <div className="align-self-center w-100">
+                <img src={img} className="img-fluid mb-5" alt="Star Wars" width="240" />
+            
+                <form onSubmit={this.submit}>
+                    <div className="form-group mb-4 mx-auto mw-600">
+                        <input type="search" onChange={this.change} autoComplete="off" className="form-control form-control-lg form-control-search" placeholder="Seek knowledge you must..." autoFocus={true} value={this.state.query} />
+                    </div>
+                </form>
+            </div>
         </div>
     }
 }
