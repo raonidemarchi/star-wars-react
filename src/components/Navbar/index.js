@@ -25,9 +25,13 @@ class Navbar extends React.Component {
     }
 
     render() {
-        return <nav className="navbar pt-4">
+        return <nav className="navbar">
             <div className="container">
-                <Link to="/topics" className="navbar-brand">
+                <Link to="/topics" className="navbar-brand d-block d-sm-none mx-auto mb-2">
+                    <img src={img} height="32" className="d-inline-block align-top" alt="Star Wars" />
+                </Link>
+
+                <Link to="/topics" className="navbar-brand mr-5 d-none d-sm-block">
                     <img src={img} height="48" className="d-inline-block align-top" alt="Star Wars" />
                 </Link>
 

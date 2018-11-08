@@ -68,6 +68,16 @@ class Search extends React.Component {
         const { error, isLoaded, results, query } = this.state;
         const navbar = <Navbar query={query} />;
 
+        if(error) {
+            return <div>
+                {navbar}
+
+                <div className="container mt-5 text-white">
+                    {error}
+                </div>
+            </div>
+        }
+
         if (!isLoaded) {
             return <div>
                 {navbar}
