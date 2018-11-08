@@ -12,11 +12,11 @@ body input.form-control-search:focus {
 body nav.navbar {
   background-color: #222;
 }
-body nav.navbar .navbar-brand {
-  font-size: 2.8rem;
-}
 body .mw-600 {
   max-width: 600px;
+}
+body .card {
+  border: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

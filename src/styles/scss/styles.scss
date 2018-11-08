@@ -13,14 +13,14 @@ body {
     
     nav.navbar {
         background-color: #222;
-
-        .navbar-brand {
-            font-size: 2.8rem;
-        }
     }
 
     .mw-600 {
         max-width: 600px;
+    }
+
+    .card {
+        border: none;
     }
 
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import img from './star-wars.png'
+import img from '../../img/star-wars.png'
 
 class Home extends React.Component {
     constructor(props) {
