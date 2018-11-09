@@ -1,30 +1,32 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
 body {
-    background-color: #191919;
+  background-color: #191919;
 
-    input.form-control-search {
-        background-color: transparent !important;
-        color: #fff !important;
+  input.form-control-search {
+    background-color: transparent !important;
+    color: #fff !important;
 
-        &:focus {
-            border-color: #ffc107;
-            box-shadow: 0 0 0 3px rgba(255, 193, 7, .25);
-        }
+    &:focus {
+      border-color: $yellow;
+      box-shadow: 0 0 0 3px rgba($yellow, .25);
     }
+  }
 
-    .h-80vh {
-        height: 80vh;
-    }
-    
-    nav.navbar {
-        background-color: #222;
-    }
+  .h-80vh {
+    height: 80vh;
+  }
+  
+  nav.navbar {
+    background-color: #222;
+  }
 
-    .mw-600 {
-        max-width: 600px;
-    }
+  .mw-600 {
+    max-width: 600px;
+  }
 
-    .card {
-        border: none;
-    }
+  .card {
+    border: none;
+  }
 
 }
