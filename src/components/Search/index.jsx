@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import Navbar from '../Navbar/index'
 
 class Search extends React.Component {
@@ -45,6 +46,8 @@ class Search extends React.Component {
             isLoaded: true,
             results: result.results,
           })
+
+          console.log(result)
         },
         (error) => {
           this.setState({
@@ -103,14 +106,16 @@ class Search extends React.Component {
           <div className="row">
             {results.map(result => (
               <div key={result.url} className="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
-                <div className="card bg-dark shadow-sm">
-                  <div className="card-body">
-                    <h5 className="card-title">{result.name}</h5>
-                    <p className="card-text">
-                      <small className="text-white-50">Last edited {this.diffDates(result.edited)} ago</small>
-                    </p>
+                <Link to={`/person/${result.url.match(/\d+/g)[0]}/${result.name.replace(/[ ]/, '-')}`}>
+                  <div className="card bg-dark shadow-sm">
+                    <div className="card-body">
+                      <h5 className="card-title">{result.name}</h5>
+                      <p className="card-text">
+                        <small className="text-white-50">Last edited {this.diffDates(result.edited)} ago</small>
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
