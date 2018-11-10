@@ -41,20 +41,8 @@ class Search extends React.Component {
     fetch(`https://swapi.co/api/people/?search=${query}`)
       .then(res => res.json())
       .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            results: result.results,
-          })
-
-          console.log(result)
-        },
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error,
-          })
-        }
+        (result) => { this.setState({ isLoaded: true, results: result.results }) },
+        (error) => { this.setState({ isLoaded: true, error }) }
       )
   }
 
