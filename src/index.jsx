@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import Routes from './routes'
 import icon from './img/favicon.ico'
-import './styles/css/styles.css'
+import './styles/styles.scss'
 
 const App = () => (
   <BrowserRouter>

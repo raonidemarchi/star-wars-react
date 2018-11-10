@@ -106,7 +106,7 @@ class Search extends React.Component {
           <div className="row">
             {results.map(result => (
               <div key={result.url} className="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
-                <Link to={`/person/${result.url.match(/\d+/g)[0]}/${result.name.replace(/[ ]/, '-')}`}>
+                <Link to={`/person/${result.url.match(/\d+/g)[0]}/${result.name.replace(/[ ]/, '-')}`} className="text-warning">
                   <div className="card bg-dark shadow-sm">
                     <div className="card-body">
                       <h5 className="card-title">{result.name}</h5>

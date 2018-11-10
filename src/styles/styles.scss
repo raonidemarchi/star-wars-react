@@ -1,7 +1,8 @@
-@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
 body {
   background-color: #191919;
+  color: #fff;
 
   input.form-control-search {
     background-color: transparent !important;
@@ -27,6 +28,15 @@ body {
 
   .card {
     border: none;
+    transition: $transition-base;
+
+    &:hover {
+      box-shadow: $box-shadow !important;
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
   }
 
 }

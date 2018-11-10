@@ -16,6 +16,9 @@ class Person extends React.Component {
 
     this.state = {
       id: props.match.params.id,
+      error: null,
+      isLoaded: false,
+      result: {},
     }
   }
 
@@ -34,30 +37,29 @@ class Person extends React.Component {
   }
 
   fetchPerson(id) {
-    console.log(id)
-    fetch(`http https://swapi.co/api/people/${id}`)
+    fetch(`https://swapi.co/api/people/${id}/`)
+      .then(res => res.json())
       .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            results: result.results,
-          })
-
-          console.log(this.state.results)
-        },
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error,
-          })
-        }
+        (result) => { this.setState({ isLoaded: true, result }) },
+        (error) => { this.setState({ isLoaded: true, error }) }
       )
   }
 
   render() {
-    // const { name } = this.state.
+    const { result, isLoaded } = this.state
+
+    if (!isLoaded) {
+      return (
+        <div className="container">
+          Loading...
+        </div>
+      )
+    }
+
     return (
-      <div>asd</div>
+      <div className="container">
+        <h1>{result.name}</h1>
+      </div>
     )
   }
 }
