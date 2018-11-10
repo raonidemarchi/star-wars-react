@@ -1,17 +1,21 @@
-import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import React, { Suspense } from 'react'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
-import Home from './components/Home'
-import Search from './components/Search'
-import Person from './components/Person'
+const Home = React.lazy(() => import('./components/Home'))
+const Search = React.lazy(() => import('./components/Search'))
+const Person = React.lazy(() => import('./components/Person'))
 
 const Routes = () => (
-  <Switch>
-    <Route path="/" exact component={Home} />
-    <Route path="/search/:query" component={Search} />
-    <Route path="/person/:id/:name?" component={Person} />
-    <Redirect from="*" to="/" />
-  </Switch>
+  <Router>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Switch>
+        <Route exact path="/" component={props => <Home {...props} />} />
+        <Route path="/search/:query" component={props => <Search {...props} />} />
+        <Route path="/person/:id/:name?" component={props => <Person {...props} />} />
+        <Redirect from="*" to="/" />
+      </Switch>
+    </Suspense>
+  </Router>
 )
 
 export default Routes
