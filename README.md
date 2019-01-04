@@ -1,5 +1,5 @@
 # Star Wars API with ReactJS + Webpack + Babel
-> Basic example getting the data from https://swapi.co/.
+> Basic example getting data from https://swapi.co/.
 
 Install dependencies:
 
