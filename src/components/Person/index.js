@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import Navbar from '../Navbar/index'
 
 class Person extends React.Component {
   static propTypes = {
