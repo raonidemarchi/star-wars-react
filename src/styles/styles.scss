@@ -38,4 +38,22 @@ body {
   a:hover {
     text-decoration: none;
   }
+
+  .v-align-center {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      margin: 0 auto;
+      font-size: 4rem;
+    }
+
+    svg {
+      position: absolute;
+      top: 26px;
+      right: 3%;
+      cursor: pointer;
+    }
+  }
 }

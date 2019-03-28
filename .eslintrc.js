@@ -6,6 +6,7 @@ module.exports = {
         "no-underscore-dangle": 0,
         "keyword-spacing": 0,
         "space-before-blocks": 0,
+        "no-script-url": 0,
         "linebreak-style": ["error", "windows"],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     },
